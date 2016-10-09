@@ -2,12 +2,12 @@
 using Android.Widget;
 using Android.OS;
 using MvvmCross.Droid.Views;
-using ExampleCore;
+using ExampleCore.ViewModels;
 
-namespace ProguardExample
+namespace ProguardExample.Views
 {
-	[Activity(Label = "Proguard Example", MainLauncher = true, Icon = "@mipmap/icon")]
-	public class MainActivity : MvxActivity<MainViewModel>
+	[Activity]
+	public class MainView : MvxActivity<MainViewModel>
 	{
 		int count = 1;
 

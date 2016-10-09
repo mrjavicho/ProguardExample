@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Foundation;
 using MvvmCross.Core.ViewModels;
 
-namespace ExampleCore
+namespace ExampleCore.ViewModels
 {
+	[Preserve(AllMembers = true)]
 	public class MainViewModel : MvxViewModel
 	{
 		public MainViewModel()
@@ -10,6 +11,11 @@ namespace ExampleCore
 			Message = GetMessage();
 		}
 
+		/// <summary>
+		/// Esta propiedad, que se utiliza bindeando directamente desde la vista, no se puede recuperar y genera un error:
+		/// 
+		/// </summary>
+		/// <value>The message.</value>
 		public string Message { get; set; }
 
 		public string GetMessage() 

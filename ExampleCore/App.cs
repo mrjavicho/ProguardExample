@@ -1,10 +1,15 @@
 ﻿using System;
+using ExampleCore.ViewModels;
+using MvvmCross.Core.ViewModels;
+
 namespace ExampleCore
 {
-	public class App
+	public class App : MvxApplication
 	{
-		public App()
+		public override void Initialize()
 		{
+			base.Initialize();
+			RegisterAppStart<MainViewModel>();
 		}
 	}
 }
